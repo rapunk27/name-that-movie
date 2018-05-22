@@ -1,0 +1,542 @@
+
+		body{
+			margin:0;
+			padding:0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		p, li{
+			margin:0 auto;
+			font-size:16px;
+		}
+
+		.container{
+			position: absolute;
+			left:0;
+			top:0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.background{
+			height: 100%;
+			width: 100%;
+			background: url(../images/dark-orchestra.jpg);
+			background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+			position: fixed;
+		}
+
+		.page-title{
+			padding: 30px 0 0 0;
+			margin-left: auto;
+			margin-right: auto;
+			width:100%;
+			text-align: center;
+			font-size:24px;
+			color:#ffffff;
+		}
+
+		audio{
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+		}
+
+		.content{
+			overflow: hidden;
+			width: 90%;
+		}
+
+		.player-container{
+			width: 50%;
+			float: left;
+		}
+
+		.player{
+			margin:50px 0 50px 0;
+			background-color:#D7D5D5;
+			padding:25px;
+			color:#333;
+			width:300px;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 10px;
+			padding-bottom: 30px;
+		}
+
+		.prev{
+			width:90%;
+			height: 90%;
+		}
+
+		.next{
+			width:90%;
+			height: 90%;
+		}
+
+		#buttons{
+			height:50px;
+			width:100%;
+			margin-top:50px;
+			position:relative;
+			top:10%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+
+		#play,#next,#prev{
+		    width: 50px;
+		    height: 50px;
+		    border: 0;
+		    background-color:#B26144;
+		    border-radius: 50%;
+		    outline: none;
+		    cursor: pointer;
+		    position: absolute;
+		    top:50%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		}
+
+		#play{
+			box-shadow: 3px 4px #999;
+		}
+		#next{
+		    width: 30px;
+		    height: 30px;
+		    left: 70%;
+		    box-shadow: 2px 3px #999;
+		}
+		#prev{
+		    width: 30px;
+		    height: 30px;
+		    left: 30%;
+		    box-shadow: 2px 3px #999;
+		}
+		#play img,#next img,#prev img{
+		    position: absolute;
+		    top:50%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+
+		}
+
+		#play:hover, #next:hover, #prev:hover{
+			background-color:#8c4d36;
+		}
+
+		#play:active, #next:active, #prev:active{
+			box-shadow: 0 0 #666;
+			transform: translateY(4px;);
+		}
+
+		.btn-extra{
+			padding: 20px 0 0 0;
+			text-align: center;
+		}
+
+		#songTitle{
+			font-family: 'Open Sans', sans-serif;
+			text-align: center;
+			font-weight: bold;
+			color:#B26144;
+			font-size:24px;
+		}
+
+		#currentTime{
+			font-family: 'Open Sans', sans-serif;
+			font-size:13px;
+			padding: 10px 20px 0 20px;
+		}
+
+		.btn{
+			border:none;
+			background-color:#B26144;	
+			padding:5px 10px;
+			color:#ffffff;
+			cursor: pointer;
+			box-shadow: 2px 5px #999;
+			border-radius: 3px;
+			font-family: 'Open Sans', sans-serif;
+			font-size:12px;
+			letter-spacing: 2px;
+			font-weight: bold;
+		}
+
+		.btn:hover{
+			background-color:#8c4d36;
+		}
+
+		.btn:active{
+			box-shadow: 0 0 #666;
+			transform: translateY(4px;);
+		}
+
+		#fill{
+		    height: 5px;
+		    background-color:#B26144;
+		    border-radius: 20px;
+		}
+		#handle{
+		    width: 8px;
+		    height: 8px;
+		    background-color:#B26144;
+		    border-radius: 50%;
+		    margin-left: -5px;
+		    transform: scale(2);
+		}
+
+		#seek-bar{
+    width: 250px;
+    height: 5px;
+    background-color:gray;
+    display: flex;
+    border-radius: 50px;
+    margin-left: 25px;
+    cursor: pointer;
+}	
+#playlist{
+	padding: 0;
+	text-align: center;
+	width: 200px;
+	margin-left: auto;
+	margin-right:auto;
+	list-style-type: none;
+	visibility: hidden;
+}
+
+#playlist li a{
+	text-decoration:none;
+	color:#000000;
+}
+
+#playlist .current-song a{
+	color:blue;
+}
+
+
+#modal-overlay{
+	width: 50%;
+	float: right;
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+
+}
+
+#modal-box{
+	background-color:#D7D5D5;
+	padding: 20px 10px 20px 10px;
+	height: auto;
+	border-radius:20px;
+	transform: translate(-30px, 30px);
+	-webkit-transform: translate(-30px, 30px);
+	-moz-transform: translate(-30px, 30px);
+}
+
+#modal-close{
+	top: 10px;
+	left: 20px;
+	position: absolute;
+	color:#B26144;
+}
+
+.modal-hide{
+	visibility: hidden;
+	opacity: 0;
+}
+
+#movie-title{
+	text-align: center;
+	font-weight: bold;
+	font-size:36px;
+}
+
+#movie-image{
+	margin-left: auto;
+	margin-right:auto;
+	display: block;
+}
+
+#images{
+	visibility: hidden;
+	opacity: 0;
+}
+/*Player Table*/
+
+.gamer-table{
+	margin-top: -10px;
+	background: #808080;
+	width: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	height: auto;
+	clear: both;
+	color:#ffffff;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 10px;
+}
+
+.gamer-table-container{
+	padding: 10px 40px;
+	text-align: center;
+
+}
+
+.gamer{
+	display: inline-block;
+}
+
+.gamer-score{
+	background-color:#B26144;
+	border-radius: 50%;
+	width: 110px;
+	height: 110px;
+	margin:0 auto;
+	float: right;
+	
+}
+
+.gamer-one-col{
+	color:#4fabe8;
+	padding: 0 10px 0 10px;
+	position: relative;
+	text-align: center;
+	
+}
+
+.gamer-two-col{
+	color:#e85e50;
+	padding: 0 10px 0 10px;
+	position: relative;
+
+}
+
+.gamer-three-col{
+	color:#00cc98;
+	padding: 0 10px 0 10px;
+	position: relative;
+
+}
+
+.gamer-bounce{
+	animation: bounce 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+	-webkit-animation: bounce 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+	-moz-animation: bounce 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+
+}
+
+@keyframes bounce{
+	0% {transform: translateY(0);}
+	10% {transform: translateY(-5px);}
+	20% {transform: translateY(-12px);}
+	30% {transform: translateY(-19px);}
+	40% {transform: translateY(-25px);}
+	55% {transform: translateY(-19px);}
+	70% {transform: translateY(-12px);}
+	80% {transform: translateY(-5px);}
+	100% {transform: translateY(0);}
+}
+
+.gamer-coin{
+	opacity: 0;
+}
+
+.coin-reveal{
+	animation: coinreveal 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+	-webkit-animation: coinreveal 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+	-moz-animation: coinreveal 0.3s cubic-bezier(0.15, 0.96, 0.74, 0.97);
+}
+
+@keyframes coinreveal{
+	0% {opacity:0;}
+	10% {opacity:0.3;}
+	20% {opacity:0.6;}
+	30% {opacity:0.8;}
+	40% {opacity:1;}
+	55% {opacity:0.8;}
+	70% {opacity:0.6;}
+	90% {opacity:0.3;}
+	100% {opacity:0;}
+}
+
+.gamer-icon{
+	background-color:#D7D5D5;
+	width: 45px;
+	height: 45px;
+	padding: 5px 0 0 0;
+	border-radius: 50%;
+	text-align: center;
+	float: left;
+	z-index: 99;
+	top:0;
+	left: 97px;
+	position: absolute;
+
+}
+
+.score{
+	padding: 10px 0 10px 0;
+	color:#ffffff;
+	font-size: 68px;
+	overflow: hidden;
+}
+
+ #score-one{
+ 	padding:10px 0 0 0;
+	clear: both;
+	text-align: center;
+	color:#B26144;
+	}
+
+	#score-two{
+	padding:10px 0 0 0;
+	clear: both;
+	text-align: center;
+	color:#B26144;
+	}
+
+	#score-three{
+	padding:10px 0 0 0;
+	clear: both;
+	text-align: center;
+	color:#B26144;
+	}
+
+
+	#inc-score-one{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+	#inc-score-two{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+
+	#inc-score-three{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+
+	#dec-score-one{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+	#dec-score-two{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+
+	#dec-score-three{
+		border:0;
+		color:#B26144;
+		padding: 5px 15px;
+		background-color: #D7D5D5;
+		cursor: pointer;
+	}
+
+
+	/*Cover Modal*/
+
+	#cover-overlay{
+	position:fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width:100%;
+	background-color:rgba(0,0,0,0.5);
+
+}
+
+#cover-box{
+	position: fixed;
+	width: 80%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	background-color: #ffffff;
+	padding: 30px;
+	margin: 20px 0;
+}
+
+#cover-overlay, #cover-box{
+	-moz-transition: all 1.5s;
+	-webkit-transition: all 1.5;
+	transition:all 1.5s;
+}
+
+.cover-hide{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.cover-title{
+	text-align: center;
+	font-size:60px;
+	color:#B26144;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.cover-text{
+	padding-top: 60px;
+	text-align: center;
+	line-height: 19px;
+	list-style-type: none;
+
+}
+
+.cover-text li{
+	line-height: 20px;
+
+}
+
+.cover-text li a{
+	color:#333333;
+	padding: 20px 0 0 0;
+	font-size:32px;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.cover-text li a:hover{
+	color:#B26144;
+	text-decoration: underline;
+	
+}
+
+#cover-exit{
+	padding: 20px;
+}
+
+@media only screen and (min-width: 1400px)  { 
+  	.gamer-table{
+  		margin-top: 40px !important;
+}
+

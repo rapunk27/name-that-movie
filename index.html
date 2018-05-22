@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name that Movie!</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Prata" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="background">
+				<div class="content">
+					<!-- PlayerContainer -->
+					<div class="player-container">
+						<div class="page-title">
+							<h1>Name that Movie!</h1>
+						</div>
+
+						<div class="player">
+
+							<div id="songTitle">Soundtrack 1</div>
+
+							<div id="buttons">
+								<button id="prev" ><img src="images/Pre.png" height="90%" width="90%"/></button>
+								<button id="play"><img src="images/Play.png"/></button>
+								<button id="next"><img src="images/Next.png" height="90%" width="90%"/></button>
+							</div>
+
+							<div id="seek-bar">
+							    <div id="fill"></div>
+							    <div id="handle"></div>
+							</div>
+
+							<div id="currentTime">00:00 / 00:00</div>
+
+							<div class="btn-extra">
+								<button class="btn btn-reveal" id="reveal">Reveal Answer</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Modal Answers -->
+					<div id="modal-overlay" class="modal-hide">
+						<div id="modal-box" class="modal-hide">
+							<a href="#" id="modal-close"><i class="fas fa-window-close fa-2x"></i></i></a>
+							<h1 id="movie-title">Movie Title</h1>
+							<img src="movie-images/01Star_Wars.jpg" id="movie-image" width="200" align="center">
+							
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class="gamer-table">
+					<div class="gamer-table-container">
+						<div class="gamer gamer-one-col">
+
+							<div class="gamer-icon"><i class="fas fa-users fa-2x"></i>
+							<img src="images/coin.png" width="40" class="gamer-coin"></div>
+
+							<div class="gamer-score"><div class="score">0</div></div>
+							<div id="score-one">
+								<button id="dec-score-one"><i class="fas fa-minus"></i></button>
+								<button id="inc-score-one"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+						
+
+						<div class="gamer gamer-two-col">
+							<div class="gamer-icon"><i class="fas fa-users fa-2x"></i>
+							<img src="images/coin.png" width="40" class="gamer-coin"></div>
+
+							<div class="gamer-score"><div class="score">0</div></div>
+							<div id="score-two">
+								<button id="dec-score-two"><i class="fas fa-minus"></i></button>
+								<button id="inc-score-two"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+						
+
+						<div class="gamer gamer-three-col">
+							<div class="gamer-icon"><i class="fas fa-users fa-2x"></i>
+							<img src="images/coin.png" width="40" class="gamer-coin"></div>
+
+							<div class="gamer-score"><div class="score">0</div></div>
+							<div id="score-three">					
+								<button id="dec-score-three"><i class="fas fa-minus"></i></button>
+								<button id="inc-score-three"><i class="fas fa-plus"></i></button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+
+				<h3 class="track-number"></h3>
+				<ul id="playlist">
+					<li class="current-song"><a href="songs/01Star_Wars.mp3">Star Wars</a></li>
+					<li><a href="songs/02Mission_Impossible.mp3">Mission Impossible</a></li>
+					<li><a href="songs/03The_Greatest_Showman.mp3">The Greatest Showman</a></li>
+
+					<li class="current-song"><a href="songs/04Superman.mp3">Superman</a></li>
+					<li><a href="songs/05James_Bond.mp3">James Bond</a></li>
+					<li><a href="songs/06The_Pink_Panther.mp3">The Pink Panther</a></li>
+
+					<li class="current-song"><a href="songs/07Titanic.mp3">Titanic</a></li>
+					<li><a href="songs/08The_Avengers.mp3">The Avengers</a></li>
+					<li><a href="songs/09Jaws.mp3">Jaws</a></li>
+
+					<li class="current-song"><a href="songs/10The_Shape_of_Water.mp3">The Shape of Water</a></li>
+					<li><a href="songs/11Indiana_Jones.mp3">Indiana Jones</a></li>
+					<li><a href="songs/12Toy_Story.mp3">Toy Story</a></li>
+
+					<li class="current-song"><a href="songs/13Jurassic_Park.mp3"></a></li>
+					<li><a href="songs/14La_la_Land.mp3">Lala Land</a></li>
+					<li><a href="songs/15Psycho.mp3">Psycho</a></li>
+
+					<li class="current-song"><a href="songs/16Coco.mp3">Coco</a></li>
+					<li><a href="songs/17Pirates_of_the_Carribbean.mp3">Pirates of the Carribean</a></li>
+					<li><a href="songs/18Pinocchio.mp3">Pinocchio</a></li>
+
+					<li class="current-song"><a href="songs/19Get_Out.mp3">Get Out</a></li>
+					<li><a href="songs/20Rocky.mp3">Rocky</a></li>
+					<li><a href="songs/21Incredibles.mp3">Incredibles</a></li>
+
+					<li class="current-song"><a href="songs/22The_Godfather.mp3">The Godfather</a></li>
+					<li><a href="songs/23Up.mp3">Up</a></li>
+					<li><a href="songs/24Back_to_the_Future.mp3">Back to the Future</a></li>
+
+					<li class="current-song"><a href="songs/25Harry_Potter.mp3">Harry Potter</a></li>
+					<li class="current-song"><a href="songs/26Lord_of_the_Rings.mp3">Lord of the Rings</a></li>
+					<li class="current-song"><a href="songs/27Star_Wars_Imperial_March.mp3">Star Wars: Imperial March</a></li>
+					
+
+				</ul>
+
+				<ul id="images">
+					<li><img src="movie-images/01Star_Wars.jpg"></li>
+					<li><img src="movie-images/02Mission_Impossible.jpg"></li>
+					<li><img src="movie-images/03The_Greatest_Showman.jpg"></li>
+
+					<li><img src="movie-images/04Superman.jpg"></li>
+					<li><img src="movie-images/05James_Bond.jpg"></li>
+					<li><img src="movie-images/06The_Pink_Panther.jpg"></li>
+
+					<li><img src="movie-images/07Titanic.jpg"></li>
+					<li><img src="movie-images/08The_Avengers.jpg"></li>
+					<li><img src="movie-images/09Jaws.jpg"></li>
+
+					<li><img src="movie-images/10The_Shape_of_Water.jpg"></li>
+					<li><img src="movie-images/11Indiana_Jones.jpg"></li>
+					<li><img src="movie-images/12Toy_Story.jpg"></li>
+
+					<li><img src="movie-images/13Jurassic_Park.jpg"></li>
+					<li><img src="movie-images/14La_la_Land.jpg"></li>
+					<li><img src="movie-images/15Psycho.jpg"></li>
+
+					<li><img src="movie-images/16Coco.jpg"></li>
+					<li><img src="movie-images/17Pirates_of_the_Carribbean.jpg"></li>
+					<li><img src="movie-images/18Pinocchio.jpg"></li>
+
+					<li><img src="movie-images/19Get_Out.jpg"></li>
+					<li><img src="movie-images/20Rocky.jpg"></li>
+					<li><img src="movie-images/21Incredibles.jpg"></li>
+
+					<li><img src="movie-images/22The_Godfather.jpg"></li>
+					<li><img src="movie-images/23Up.jpg"></li>
+					<li><img src="movie-images/24Back_to_the_Future.jpg"></li>
+
+					<li><img src="movie-images/25Harry_Potter.jpg"></li>
+					<li><img src="movie-images/26Lord_of_the_Rings.jpg"></li>
+					<li><img src="movie-images/27Star_Wars_Imperial_March.jpg"></li>
+					
+				</ul>
+		</div>
+
+
+	</div>
+	<div id="cover-overlay" >
+		<div id="cover-box" >
+				<h1 class="cover-title">Name that Movie!</h1>
+
+				<ul class="cover-text">
+					<li><a href="#" id="cover-play"><i class="fas fa-gamepad"></i> Play Game</a></li>
+					<br/><br/>
+					<li><a href="#" id="cover-exit">Exit</a></li>
+				</ul>
+		
+
+		</div>
+	</div>
+
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/script.js"></script>
+
+
+</body>
+</html>
